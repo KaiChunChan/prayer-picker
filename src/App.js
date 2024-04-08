@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import RandomNamePicker from './RandomNamePicker';
+import backgroundImage from './background.jpeg'; // Import the image file
 
 function App() {
+  const styles = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover', // Ensure the background image covers the entire area
+    backgroundPosition: 'center', // Center the background image
+    height: '100vh'
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={styles}>
+      <RandomNamePicker />
     </div>
   );
 }
 
 export default App;
+
